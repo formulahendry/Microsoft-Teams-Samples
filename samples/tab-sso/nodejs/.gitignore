@@ -64,4 +64,4 @@ manifest/
 build/
 
 # VS Code config files
-.vscode/**
+# .vscode/**
