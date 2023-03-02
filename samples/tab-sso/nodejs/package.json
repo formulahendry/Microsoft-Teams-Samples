@@ -26,6 +26,7 @@
   },
   "devDependencies": {
     "del": "^3.0.0",
+    "env-cmd": "^10.1.0",
     "gulp": "^4.0.2",
     "gulp-zip": "^4.0.0"
   }

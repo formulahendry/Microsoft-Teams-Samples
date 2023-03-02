@@ -1,8 +1,8 @@
 {
   "tab": {
-    "appId": "MICROSOFT_APP_ID",
-    "clientSecret": "MICROSOFT_APP_PASSWORD",
-    "applicationIdUri": "Application_Id_Uri"
+    "appId": "d068606c-f209-4577-ab7b-c703288a5a0d",
+    "clientSecret": "gtl8Q~ESELMMGmqmh3U64L1w0_YItjnouDiJMbXS",
+    "applicationIdUri": "api://af29-2404-f801-9000-1a-10b0-2e2d-8999-25ab.ngrok.io/d068606c-f209-4577-ab7b-c703288a5a0d"
   },
-  "port": "3978"
+  "port": "53000"
 }
