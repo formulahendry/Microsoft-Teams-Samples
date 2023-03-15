@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-	  "@azure/msal-browser": "^2.11.0",
+    "@azure/msal-browser": "^2.11.0",
     "@fluentui/react-components": "^9.0.0-rc.10",
     "@microsoft/teams-js": "^2.5.0",
     "@testing-library/jest-dom": "^5.11.6",
@@ -24,7 +24,8 @@
     "crypto": false
   },
   "scripts": {
-    "start": "set PORT=3978 HTTP=true && react-scripts start",
+    "dev:teamsfx": "env-cmd --silent -f .localSettings npm run start",
+    "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
@@ -47,5 +48,8 @@
       "last 1 safari version"
     ]
   },
-  "proxy": "http://localhost:5000"
+  "proxy": "http://localhost:5000",
+  "devDependencies": {
+    "env-cmd": "^10.1.0"
+  }
 }
