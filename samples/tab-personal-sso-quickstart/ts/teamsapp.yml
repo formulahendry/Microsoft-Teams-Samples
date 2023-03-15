@@ -1,0 +1,7 @@
+# Visit https://aka.ms/teamsfx-v5.0-guide for details on this file
+# Visit https://aka.ms/teamsfx-actions for details on actions
+version: 1.0.0
+
+environmentFolderPath: ./env
+
+projectId: 04868f9a-31ab-49dc-8d11-f692aed344a0

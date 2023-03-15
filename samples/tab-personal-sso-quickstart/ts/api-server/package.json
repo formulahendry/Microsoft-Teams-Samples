@@ -4,12 +4,13 @@
   "description": "The API server for a Teams tab app",
   "main": "app.js",
   "scripts": {
-    "start": "node server.js"
+    "start": "node --inspect server.js"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
     "@azure/msal-node": "^1.4.0",
+    "cors": "^2.8.5",
     "dotenv": "^8.2.0",
     "express": "^4.17.1",
     "jwt-decode": "^2.2.0",

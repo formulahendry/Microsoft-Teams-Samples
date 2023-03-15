@@ -3,6 +3,7 @@ const express = require('express');
 const jwt_decode = require('jwt-decode');
 const msal = require('@azure/msal-node');
 const app = express();
+const cors = require('cors')
 const path = require('path');
 const ENV_FILE = path.join(__dirname, '.env');
 require('dotenv').config({ path: ENV_FILE });
@@ -17,6 +18,8 @@ let handleQueryError = function (err) {
         message: 'Stupid network Error'
     }));
 };
+
+app.use(cors());
 
 app.get('/getGraphAccessToken', async (req,res) => {
 
