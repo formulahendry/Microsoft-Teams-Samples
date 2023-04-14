@@ -25,6 +25,7 @@ resource botService 'Microsoft.BotService/botServices@2021-03-01' = {
     displayName: botDisplayName
     endpoint: 'https://${botAppDomain}/api/messages'
     msaAppId: botAadAppClientId
+    msaAppType: 'MultiTenant'
   }
   sku: {
     name: botServiceSku
