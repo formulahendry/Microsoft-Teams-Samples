@@ -14,7 +14,8 @@ param botAppDomain string
 param aadAppClientId string
 @secure()
 param aadAppClientSecret string
-
+param microsoftAppType string
+param microsoftAppTenantId string
 
 // Register your web service as a bot with the Bot Framework
 resource botService 'Microsoft.BotService/botServices@2021-03-01' = {
@@ -25,7 +26,8 @@ resource botService 'Microsoft.BotService/botServices@2021-03-01' = {
     displayName: botDisplayName
     endpoint: 'https://${botAppDomain}/api/messages'
     msaAppId: botAadAppClientId
-    msaAppType: 'MultiTenant'
+    msaAppType: microsoftAppType
+    msaAppTenantId: microsoftAppType == 'SingleTenant' ? microsoftAppTenantId : ''
   }
   sku: {
     name: botServiceSku
@@ -59,13 +61,9 @@ resource botServiceConnection 'Microsoft.BotService/botServices/connections@2021
         key: 'clientSecret'
         value: aadAppClientSecret
       }
-      // {
-      //   key: 'scopes'
-      //   value: 'User.Read'
-      // }
       {
         key: 'tenantID'
-        value: 'common'
+        value: microsoftAppTenantId
       }
       {
         key: 'tokenExchangeUrl'
