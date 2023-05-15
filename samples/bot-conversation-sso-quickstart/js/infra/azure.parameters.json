@@ -6,7 +6,7 @@
       "value": "bot${{RESOURCE_SUFFIX}}"
     },
     "botAadAppClientId": {
-      "value": "${{BOT_ID}}"
+      "value": "${{AAD_APP_CLIENT_ID}}"
     },
     "botAppDomain": {
       "value": "${{BOT_DOMAIN}}"

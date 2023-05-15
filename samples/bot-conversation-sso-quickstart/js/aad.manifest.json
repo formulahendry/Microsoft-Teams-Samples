@@ -92,7 +92,7 @@
         }
     ],
     "identifierUris":[
-        "api://botid-${{BOT_ID}}"
+        "api://botid-${{AAD_APP_CLIENT_ID}}"
     ],
     "replyUrlsWithType":[
         {

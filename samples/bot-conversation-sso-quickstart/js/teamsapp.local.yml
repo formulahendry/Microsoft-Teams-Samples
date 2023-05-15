@@ -25,17 +25,6 @@ provision:
     writeToEnvironmentFile:
       teamsAppId: TEAMS_APP_ID
 
-  # Create or reuse an existing Azure Active Directory application for bot.
-  - uses: botAadApp/create
-    with:
-      # The Azure Active Directory application's display name
-      name: bot-conversation-sso-quickstart-${{TEAMSFX_ENV}}
-    writeToEnvironmentFile:
-      # The Azure Active Directory application's client id created for bot.
-      botId: BOT_ID
-      # The Azure Active Directory application's client secret created for bot.
-      botPassword: SECRET_BOT_PASSWORD
-
   - uses: script
     with:
       run:
@@ -96,8 +85,8 @@ deploy:
     with:
       target: ./.env
       envs:
-        MicrosoftAppId: ${{BOT_ID}}
-        MicrosoftAppPassword: ${{SECRET_BOT_PASSWORD}}
+        MicrosoftAppId: ${{AAD_APP_CLIENT_ID}}
+        MicrosoftAppPassword: ${{SECRET_AAD_APP_CLIENT_SECRET}}
         connectionName: ${{CONNECTION_NAME}}
         MicrosoftAppType: ${{MICROSOFT_APP_TYPE}}
         MicrosoftAppTenantId: ${{MICROSOFT_APP_TENANT_ID}}
