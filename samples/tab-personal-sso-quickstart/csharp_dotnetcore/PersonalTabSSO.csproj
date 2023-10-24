@@ -5,6 +5,10 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <ProjectCapability Include="TeamsFx" />
+  </ItemGroup>
+
+  <ItemGroup>
     <Compile Remove="Manifest\**" />
     <Content Remove="Manifest\**" />
     <EmbeddedResource Remove="Manifest\**" />
