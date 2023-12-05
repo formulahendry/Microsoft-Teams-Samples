@@ -20,7 +20,7 @@ provision:
       generateClientSecret: true
       # Authenticate users with a Microsoft work or school account in your
       # organization's Azure AD tenant (for example, single tenant).
-      signInAudience: AzureADMyOrg
+      signInAudience: AzureADMultipleOrgs
     # Write the information of created resources into environment file for the
     # specified environment variable(s).
     writeToEnvironmentFile:
@@ -56,11 +56,9 @@ provision:
       target: ./appsettings.json
       content:
         AzureAd:
-          TenantId: ${{AAD_APP_TENANT_ID}}
           ClientId: ${{AAD_APP_CLIENT_ID}}
           AppSecret: ${{SECRET_AAD_APP_CLIENT_SECRET}}
           ApplicationIdURI: api://${{TAB_DOMAIN}}/${{AAD_APP_TENANT_ID}}
-          ValidIssuers: https://login.microsoftonline.com/${{AAD_APP_TENANT_ID}}/v2.0,https://sts.windows.net/${{AAD_APP_TENANT_ID}}/
 
   # Apply the AAD manifest to an existing AAD app. Will use the object id in
   # manifest file to determine which AAD app to update.
