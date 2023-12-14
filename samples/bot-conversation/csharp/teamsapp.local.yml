@@ -4,7 +4,7 @@
 version: v1.2
 
 additionalMetadata:
-  sampleTag: test:test
+  sampleTag: Microsoft-Teams-Samples:bot-conversation-csharp
 
 provision:
   - uses: aadApp/create # Creates a new Azure Active Directory (AAD) app to authenticate users if the environment variable that stores clientId is empty
